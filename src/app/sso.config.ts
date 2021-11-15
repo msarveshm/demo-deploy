@@ -22,7 +22,7 @@ import { AuthConfig } from 'angular-oauth2-oidc';
     // set the scope for the permissions the client should request
     // The first four are defined by OIDC.
     // Important: Request offline_access to get a refresh token
-    // The api scope is a usecase specific one
+    // The api scope is a usecase specific one..testing
     scope: 'openid profile email offline_access api',
 
     showDebugInformation: true,

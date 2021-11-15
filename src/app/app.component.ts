@@ -8,18 +8,17 @@ import { authCodeFlowConfig } from './sso.config';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demo-app';
+  title = 'sso-app';
   constructor(private oauthService:OAuthService){
     this.configureSingleSignOn();
   }
-
   configureSingleSignOn(){
     this.oauthService.configure(authCodeFlowConfig);
     this.oauthService.tokenValidationHandler=new JwksValidationHandler();
     this.oauthService.loadDiscoveryDocumentAndTryLogin();
   }
   login(){
-    this.oauthService.initImplicitFlow();
+   this.oauthService.initImplicitFlow();
   }
   logout(){
     this.oauthService.logOut();
